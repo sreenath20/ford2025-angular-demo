@@ -4,10 +4,11 @@ import {FormsModule} from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule,NgIf,NgFor,LoginComponent,RegistrationComponent],
+  imports: [FormsModule,NgIf,NgFor,LoginComponent,RegistrationComponent,AdminLoginComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -17,7 +18,7 @@ export class AppComponent {
   pi = 3.14;
   height = "10";
   width = 20.55;
-  imageUrl = "https://www.w3schools.com/HTML/w3schools.jpg";
+  imageUrl ="images/w3w3schools.jpg"; //"https://www.w3schools.com/HTML/w3schools.jpg";
     employee = {
     "id":1,
     "name":"Sreenath",

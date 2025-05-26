@@ -1,1 +1,12 @@
-<p>login works!</p>
+<h1> User Login</h1>
+
+<div>
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" [(ngModel)] ="user2.name"><br>
+        <label for="password" >Password:</label><br>
+        <input type="password" id="password" name="password" [(ngModel)]="user2.password"><br>
+        <input type="button" value="Login" (click)="userLogin()">
+    </form>
+    <input type="button" (click)="getServiceDat()" value="fetch Data">
+</div>

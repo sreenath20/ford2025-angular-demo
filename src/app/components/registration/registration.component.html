@@ -1,1 +1,13 @@
-<p>registration works!</p>
+<div>
+    <h1> User Wallet registration:</h1>
+
+    <form>
+        Name:<br>
+        <input type="text" id="name" name="name" [(ngModel)]="userWallet.name"><br>
+        password:<br>
+        <input type="password" id="password" name="password" [(ngModel)]="userWallet.password"><br>
+        Email:<br>
+        <input type="text" id="email" name="email" [(ngModel)]="userWallet.email"><br>
+        <input type="button" (click)="registerWalletUser()" value="Register">
+    </form>
+</div>

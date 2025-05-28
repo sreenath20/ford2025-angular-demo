@@ -1,5 +1,103 @@
+<a routerLink="">Home</a> <br>
+<a routerLink="/login">Login</a> <br>
+<a routerLink="/wallets">Display Wallets</a> <br>
+
+
+
+<router-outlet></router-outlet>
+
+<!-- <h3> Serach product By name:</h3>
+<form>
+  <input type="text" id="query" 
+  name="query" [(ngModel)]="query">
+  <input type="button" (click)="applyFilter()" value="Search">
+</form>
+{{query}}
+
+
+<h3> Sorted array of products</h3>
+<h3> Unsorted products</h3>
+  <table >
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+    <tr *ngFor="let product of products 
+    | search: filterQuery ">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      
+    </tr>
+    <h3> Sorted products </h3>
+  </table>
+  <table >
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+    <tr *ngFor="let product of products | sortProduct :'price'">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      
+    </tr>
+  </table>
+
+<h3> Custom uppcase pipe</h3>
+{{title | customUpperCase:'*' }}<br>
+{{title | customUpperCase:'#':'@' }}<br>
+{{title | customUpperCase }}<br>
+<h3> custom Square pipe</h3>
+{{ 5 | square}}
+<h3> Custom array sum pipe</h3>
+{{values | arraySum }}
+<hr>
+
+{{title | uppercase}}
+<br>
+{{title | lowercase}}
+<br>
+{{title | titlecase}}
+<h3> Date pipe</h3>
+{{today}}<br>
+{{today | date }} <br>
+Short: {{today | date:"short" }} <br>
+medium: {{today | date:"medium" }} <br>
+long: {{today | date:"long" }} <br>
+full: {{today | date:"full" }} <br>
+
+MediumTime: {{today | date:"mediumTime" }} <br>
+
+<h3> decimalPipe</h3>
+{{pi}}<br>
+{{pi | number}}<br>
+{{pi | number : '2.2-2'}}<br>
+{{pi | number : '2.0-0'}}<br>
+
+{{pi | number : '2.0-2'}}<br>
+<h3> Currency pipe</h3>
+{{price}}
+{{price|currency}}<br>
+{{price|currency:'USD'}}<br>
+{{price|currency:'INR'}}<br>
+{{price|currency:'EUR':'symbol':'2.0-0'}}<br>
+
+{{price|currency:'EUR':'code':'2.0-0'}}<br>
+{{price|currency:'USD':'symbol-narrow':'2.0-0'}}<br>
+<h3>Json pipe</h3>
+
+{{employee}}<br>
+{{employee | json}}<br>
+{{employee | json | uppercase}}
+<h3> Pipe chain</h3>
+full: {{today | date:"full" }} <br>
+full: {{today | date:"full" | uppercase }} <br>
+
 <app-login></app-login>
-<!-- <app-registration></app-registration> -->
+ <app-registration></app-registration>
  
 <app-admin-login></app-admin-login>
 <h1> My new Angular app !</h1>
@@ -74,4 +172,4 @@ name: {{name}}
       
     </tr>
   </table>
-</div>
+</div> -->

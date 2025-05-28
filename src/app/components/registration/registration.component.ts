@@ -10,7 +10,7 @@ import { JsonPipe } from '@angular/common';
   styleUrl: './registration.component.css'
 })
 export class RegistrationComponent {
-  userWallet :Wallet = new Wallet(0,"","","");
+  userWallet :Wallet = new Wallet(0,"",0.0,"","");
   registerWalletUser(){
     console.log(JSON.stringify(this.userWallet ));
   }

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Wallet } from '../../model/wallet';
 import { FormsModule } from '@angular/forms';
-import { JsonPipe } from '@angular/common';
+import { WalletService } from '../../services/wallet.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-registration',
@@ -10,8 +11,21 @@ import { JsonPipe } from '@angular/common';
   styleUrl: './registration.component.css'
 })
 export class RegistrationComponent {
-  userWallet :Wallet = new Wallet(0,"",0.0,"","");
-  registerWalletUser(){
-    console.log(JSON.stringify(this.userWallet ));
+  userWallet: Wallet = new Wallet();
+  constructor(private walletService: WalletService) { }
+  registerWalletUser() {
+    console.log(JSON.stringify(this.userWallet));
+    let observer: Observable<any> = this.walletService.resigisterNewWallet(this.userWallet);
+    // custom validation
+    observer.subscribe(
+      {
+        next: (data) => {
+          console.log(data);
+        },
+        error: (error) => {
+          console.log(error);
+        }
+      }
+    )
   }
 }

@@ -1,18 +1,8 @@
 export class Wallet {
 
-    id:number;
-    name:string;
-    balance:number;
-    password:string;
-    email:string;
-    city?:string;
-
-    constructor(id:number,name:string,balance:number,password:string,email:string){
-        this.id=id;
-        this.name=name;
-        this.balance=balance;
-        this.password=password;
-        this.email=email;
+    constructor(public id?:number,public name?:string,
+        public balance?:number,public password?:string,public email?:string){
+   
     }        
 }
 
